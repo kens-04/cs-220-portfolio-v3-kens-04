@@ -1,3 +1,68 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Base dark/light backgrounds and text */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-[#0b0b0d] text-[#e6e6e8] transition-colors duration-300;
+}
+
+html.light body {
+  @apply bg-white text-[#171717];
+}
+
+/* Container utility */
+.container {
+  @apply max-w-7xl mx-auto px-4 md:px-6;
+}
+
+/* Accent color utility */
+.text-accent {
+  color: #7c5cff;
+}
+.bg-accent {
+  background-color: #7c5cff;
+}
+
+/* Consistent corner radius */
+.rounded-2xl {
+  border-radius: 1rem;
+}
+
+/* Fade-up animation */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(0.75rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(0.75rem);
+  transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.reveal-in {
+  opacity: 1;
+  transform: none;
+  animation: fade-up 0.7s both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .reveal,
+  .reveal-in {
+    transition: none !important;
+    animation: none !important;
+  }
+}
