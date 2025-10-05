@@ -18,8 +18,8 @@ export default function About() {
               <h1 className="text-[clamp(2rem,5vw,3rem)] font-semibold tracking-tight">
                 About <span className="text-[#7c5cff]">Kensho Okamoto</span>
               </h1>
-              <p className="text-lg leading-relaxed text-white/80">
-                {"I’m"} a software engineering student based in Utah, originally from Japan. I started programming
+              <p className="text-lg leading-relaxed text-[#171717] dark:text-white/80">
+                I am a software engineering student based in Utah, originally from Japan. I started programming
                 because I want to build services that help many people and make their day a little happier. Studying
                 abroad broadened my perspective and taught me to embrace diverse cultures and ways of thinking.
               </p>
@@ -51,7 +51,7 @@ export default function About() {
         {/* Quick Facts */}
         <section className="py-12 md:py-16">
           <div className="max-w-7xl mx-auto px-4 md:px-6">
-            <h2 className="reveal text-xl font-semibold mb-6">Quick facts</h2>
+            <h2 className="reveal text-xl font-semibold mb-6 text-[#171717] dark:text-white">Quick facts</h2>
             <div className="reveal grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
               <Fact label="From" value="Aichi, Japan" />
               <Fact label="Based in" value="Utah, USA" />
@@ -65,14 +65,14 @@ export default function About() {
         <section className="py-12 md:py-16">
           <div className="max-w-7xl mx-auto px-4 md:px-6 grid lg:grid-cols-3 gap-10">
             <div className="reveal lg:col-span-2 space-y-4">
-              <h2 className="text-xl font-semibold">My story</h2>
-              <p className="text-white/80 leading-relaxed">
+              <h2 className="text-xl font-semibold text-[#171717] dark:text-white">My story</h2>
+              <p className="text-[#171717] dark:text-white/80 leading-relaxed">
                 I decided to learn programming to gain the skills needed to create services that truly help people. I
                 enjoy being a <em>giver</em>—supporting others, lending a hand, and building things that improve
                 everyday life. Studying in the U.S. expanded my worldview: meeting friends from different cultures
                 taught me to keep my mind open and stay curious.
               </p>
-              <p className="text-white/80 leading-relaxed">
+              <p className="text-[#171717] dark:text-white/80 leading-relaxed">
                 Outside of code, live music is my passion—hip-hop, rock, jazz, and pop. Those moments at concerts
                 recharge me and remind me why creating meaningful experiences matters.
               </p>
@@ -80,7 +80,7 @@ export default function About() {
 
             {/* Values / Principles */}
             <div className="reveal space-y-4">
-              <h3 className="text-lg font-semibold">What I value</h3>
+              <h3 className="text-lg font-semibold text-[#171717] dark:text-white">What I value</h3>
               <ul className="space-y-3">
                 <ValueCard
                   title="Pursue what you love"
@@ -171,8 +171,8 @@ export default function About() {
 function Fact({ label, value }) {
   return (
     <div className="rounded-2xl ring-1 ring-white/10 bg-white/5 px-4 py-3">
-      <div className="text-xs uppercase tracking-wide text-white/50">{label}</div>
-      <div className="mt-1 font-medium">{value}</div>
+      <div className="text-xs uppercase tracking-wide text-[#7c7c7c] dark:text-white/50">{label}</div>
+      <div className="mt-1 font-medium text-[#171717] dark:text-white">{value}</div>
     </div>
   );
 }
@@ -180,8 +180,8 @@ function Fact({ label, value }) {
 function ValueCard({ title, text }) {
   return (
     <li className="rounded-2xl ring-1 ring-white/10 bg-white/5 px-4 py-3">
-      <div className="font-medium">{title}</div>
-      <p className="text-sm text-white/75 mt-1">{text}</p>
+      <div className="font-medium text-[#171717] dark:text-white">{title}</div>
+      <p className="text-sm text-[#171717] dark:text-white/75 mt-1">{text}</p>
     </li>
   );
 }
@@ -190,16 +190,16 @@ function TimelineItem({ period, title, detail }) {
   return (
     <div className="relative pl-5">
       <div className="absolute left-0 top-1.5 h-2 w-2 rounded-full bg-[#7c5cff]" />
-      <div className="text-xs uppercase tracking-wide text-white/50">{period}</div>
-      <div className="font-medium">{title}</div>
-      <p className="text-white/75 mt-1">{detail}</p>
+      <div className="text-xs uppercase tracking-wide text-[#7c7c7c] dark:text-white/50">{period}</div>
+      <div className="font-medium text-[#171717] dark:text-white">{title}</div>
+      <p className="text-[#171717] dark:text-white/75 mt-1">{detail}</p>
     </div>
   );
 }
 
 function Badge({ children }) {
   return (
-    <span className="inline-flex items-center rounded-full bg-white/5 ring-1 ring-white/10 px-3 py-1 text-sm text-white/85">
+    <span className="inline-flex items-center rounded-full bg-white/5 ring-1 ring-white/10 px-3 py-1 text-sm text-[#171717] dark:text-white/85">
       {children}
     </span>
   );
