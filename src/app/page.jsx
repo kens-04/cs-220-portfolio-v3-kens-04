@@ -37,17 +37,17 @@ export default function Home() {
       <Navbar />
       {/* Hero Section */}
       <Section className="flex flex-col items-center justify-center min-h-[60vh] text-center gap-6 reveal">
-        <h1 className="font-bold text-[clamp(1.75rem,4vw,3rem)] leading-tight text-accent">Ken Smith</h1>
+        <h1 className="font-bold text-[clamp(1.75rem,4vw,3rem)] leading-tight text-accent">Kensho Okamoto</h1>
         <h2 className="text-lg md:text-2xl font-semibold text-white/80 dark:text-[#e6e6e8]/80 mb-2">
           Software Engineer
         </h2>
         <p className="max-w-xl mx-auto text-base md:text-lg text-white/70 dark:text-[#e6e6e8]/70 mb-6">
-          I build robust, accessible web apps with a focus on performance, design, and user experience. Let&apos;s create
-          something impactful together.
+          I build robust, accessible web apps with a focus on performance, design, and user experience. Let&apos;s
+          create something impactful together.
         </p>
         <div className="flex flex-wrap justify-center gap-4">
           <a
-            href="https://github.com/your-github"
+            href="https://github.com/kens-04"
             target="_blank"
             rel="noopener noreferrer"
             className="px-6 py-3 bg-accent text-white font-semibold rounded-xl shadow hover:bg-accent/90 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
@@ -56,7 +56,7 @@ export default function Home() {
             GitHub
           </a>
           <a
-            href="https://linkedin.com/in/your-linkedin"
+            href="https://linkedin.com/in/kensho-okamoto"
             target="_blank"
             rel="noopener noreferrer"
             className="px-6 py-3 bg-transparent border border-accent text-accent font-semibold rounded-xl shadow hover:bg-accent/10 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
@@ -106,7 +106,7 @@ export default function Home() {
           title="Portfolio Platform"
           description="A modern, responsive portfolio platform built with Next.js and TailwindCSS. Features dark mode, project showcases, and blazing fast performance."
           tags={["Next.js", "TailwindCSS", "Vercel"]}
-          github="https://github.com/your-github/portfolio"
+          github="https://github.com/kens-04/portfolio"
         />
       </Section>
     </>
