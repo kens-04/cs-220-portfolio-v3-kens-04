@@ -38,10 +38,10 @@ export default function Home() {
       {/* Hero Section */}
       <Section className="flex flex-col items-center justify-center min-h-[60vh] text-center gap-6 reveal">
         <h1 className="font-bold text-[clamp(1.75rem,4vw,3rem)] leading-tight text-accent">Kensho Okamoto</h1>
-        <h2 className="text-lg md:text-2xl font-semibold text-white/80 dark:text-[#e6e6e8]/80 mb-2">
+        <h2 className="text-lg md:text-2xl font-semibold text-[#171717] dark:text-[#e6e6e8]/80 mb-2">
           Software Engineer
         </h2>
-        <p className="max-w-xl mx-auto text-base md:text-lg text-white/70 dark:text-[#e6e6e8]/70 mb-6">
+        <p className="max-w-xl mx-auto text-base md:text-lg text-[#171717] dark:text-[#e6e6e8]/70 mb-6">
           I build robust, accessible web apps with a focus on performance, design, and user experience. Let&apos;s
           create something impactful together.
         </p>
