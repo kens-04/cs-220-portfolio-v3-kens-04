@@ -42,7 +42,7 @@ export default function Home() {
           Software Engineer
         </h2>
         <p className="max-w-xl mx-auto text-base md:text-lg text-white/70 dark:text-[#e6e6e8]/70 mb-6">
-          I build robust, accessible web apps with a focus on performance, design, and user experience. Let's create
+          I build robust, accessible web apps with a focus on performance, design, and user experience. Let&apos;s create
           something impactful together.
         </p>
         <div className="flex flex-wrap justify-center gap-4">
