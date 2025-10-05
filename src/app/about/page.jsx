@@ -1,203 +1,201 @@
-import Navbar from "../../components/Navbar";
-import Image from "next/image";
-import Link from "next/link";
-import Section from "../../components/Section";
-import SkillBadge from "../../components/SkillBadge";
-import TimelineItem from "../../components/TimelineItem";
-
 export const metadata = {
-  title: "About Kensho Okamoto",
-  description: "About page for Kensho Okamoto, software engineer. Skills, experience, and values.",
+  title: "About — Kensho Okamoto",
+  description:
+    "About Kensho Okamoto — a Japan-born software engineering student in Utah who loves helping people, data/AI, and live music.",
 };
 
-const quickFacts = [
-  { label: "Location", value: "Tokyo, Japan" },
-  { label: "Role", value: "Software Engineer" },
-  { label: "Interests", value: "Web, AI, Design, Music" },
-  { label: "Currently learning", value: "TypeScript, Cloud, D3.js" },
-];
-
-const skills = ["JavaScript", "React", "Next.js", "TailwindCSS", "Java", "SQL", "Node.js", "Python", "Git", "Figma"];
-
-const timeline = [
-  {
-    title: "Software Engineer",
-    org: "Tech Startup",
-    period: "2023–Present",
-    desc: "Developed scalable web apps, led UI modernization, mentored junior devs.",
-  },
-  {
-    title: "B.S. Computer Science",
-    org: "Ensign College",
-    period: "2020–2023",
-    desc: "Graduated with honors. Focused on full-stack web and project-based learning.",
-  },
-];
-
-const values = [
-  {
-    title: "Pursue what you love",
-    desc: "I put 180% into the work I genuinely care about.",
-    icon: (
-      <svg width="32" height="32" fill="none" viewBox="0 0 32 32">
-        <path d="M16 29s-9-7.434-9-13.5A6.5 6.5 0 0116 9a6.5 6.5 0 019 6.5C25 21.566 16 29 16 29z" fill="#7c5cff" />
-      </svg>
-    ),
-  },
-  {
-    title: "Build & ship",
-    desc: "Learning through action—shipping is the best teacher.",
-    icon: (
-      <svg width="32" height="32" fill="none" viewBox="0 0 32 32">
-        <rect x="6" y="14" width="20" height="12" rx="2" fill="#7c5cff" />
-        <path d="M16 6v8" stroke="#7c5cff" strokeWidth="2" strokeLinecap="round" />
-      </svg>
-    ),
-  },
-  {
-    title: "Mentorship & community",
-    desc: "Grow with trusted mentors and diverse peers.",
-    icon: (
-      <svg width="32" height="32" fill="none" viewBox="0 0 32 32">
-        <circle cx="16" cy="12" r="6" fill="#7c5cff" />
-        <rect x="6" y="22" width="20" height="6" rx="3" fill="#7c5cff" />
-      </svg>
-    ),
-  },
-];
-
-export default function AboutPage() {
+export default function About() {
   return (
-    <>
-      <Navbar />
-      <main>
-        {/* Hero Section */}
-        <Section id="about-hero" className="reveal">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-            {/* Left: Heading, paragraph, CTA */}
-            <div>
-              <h1 className="text-3xl md:text-4xl font-bold text-accent mb-4">About Kensho Okamoto</h1>
-              <p className="mb-6 text-lg text-white/80 dark:text-[#e6e6e8]/80">
-                I’m a software engineer focused on building clean, performant web apps. I care about real-world impact,
-                clarity, and craftsmanship.
-              </p>
-              <div className="flex flex-wrap gap-4 mb-4">
-                <a
-                  href="/resume.pdf"
-                  className="px-6 py-3 bg-accent text-white font-semibold rounded-xl shadow hover:bg-accent/90 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
-                  aria-label="Download Résumé"
-                  download
-                >
-                  Download Résumé
-                </a>
-                <Link
-                  href="/contact"
-                  className="px-6 py-3 bg-transparent border border-accent text-accent font-semibold rounded-xl shadow hover:bg-accent/10 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
-                  aria-label="Contact"
-                >
-                  Contact
-                </Link>
-              </div>
-            </div>
-            {/* Right: Profile image */}
-            <div className="flex justify-center md:justify-end">
-              <div className="rounded-full ring-4 ring-accent/30 shadow-lg overflow-hidden w-40 h-40 md:w-56 md:h-56 bg-white/10 flex items-center justify-center">
-                {/* Use next/image if profile.jpg exists, else fallback to <img> */}
-                <Image
-                  src="/profile.jpg"
-                  alt="Kensho Okamoto profile photo"
-                  width={224}
-                  height={224}
-                  className="object-cover w-full h-full"
-                  priority
-                />
-              </div>
+    <main className="min-h-screen">
+      {/* Hero */}
+      <section className="py-16 md:py-24">
+        <div className="max-w-7xl mx-auto px-4 md:px-6 grid md:grid-cols-2 gap-10 items-center">
+          <div className="reveal space-y-5">
+            <h1 className="text-[clamp(2rem,5vw,3rem)] font-semibold tracking-tight">
+              About <span className="text-[#7c5cff]">Kensho Okamoto</span>
+            </h1>
+            <p className="text-lg leading-relaxed text-white/80">
+              {"I’m"} a software engineering student based in Utah, originally from Japan. I started programming because
+              I want to build services that help many people and make their day a little happier. Studying abroad
+              broadened my perspective and taught me to embrace diverse cultures and ways of thinking.
+            </p>
+            <div className="flex flex-wrap gap-3">
+              <a
+                href="/projects"
+                className="inline-flex items-center rounded-xl bg-[#7c5cff] px-5 py-2.5 font-medium text-white shadow transition-transform hover:scale-[1.02]"
+              >
+                View Projects
+              </a>
+              <a
+                href="/contact"
+                className="inline-flex items-center rounded-xl px-5 py-2.5 font-medium ring-1 ring-white/15 hover:ring-white/30 transition"
+              >
+                Contact
+              </a>
             </div>
           </div>
-        </Section>
 
-        {/* Quick Facts Grid */}
-        <Section id="about-facts" title="Quick Facts" className="reveal">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {quickFacts.map((fact) => (
-              <div
-                key={fact.label}
-                className="rounded-2xl ring-1 ring-white/10 bg-white/5 dark:bg-white/5 p-6 text-center shadow"
-              >
-                <div className="text-sm text-white/60 dark:text-[#e6e6e8]/60 mb-1">{fact.label}</div>
-                <div className="text-lg font-semibold text-accent">{fact.value}</div>
-              </div>
-            ))}
+          {/* Profile Image placeholder */}
+          <div className="reveal md:justify-self-end">
+            <div className="aspect-square w-64 md:w-80 rounded-3xl bg-white/5 ring-1 ring-white/10 shadow-lg overflow-hidden grid place-items-center">
+              <span className="text-sm text-white/60">Profile Photo</span>
+            </div>
           </div>
-        </Section>
+        </div>
+      </section>
 
-        {/* Skills Section */}
-        <Section id="about-skills" title="Core Skills" className="reveal">
-          <div className="flex flex-wrap gap-3 justify-center">
-            {skills.map((skill) => (
-              <SkillBadge key={skill}>{skill}</SkillBadge>
-            ))}
+      {/* Quick Facts */}
+      <section className="py-12 md:py-16">
+        <div className="max-w-7xl mx-auto px-4 md:px-6">
+          <h2 className="reveal text-xl font-semibold mb-6">Quick facts</h2>
+          <div className="reveal grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <Fact label="From" value="Aichi, Japan" />
+            <Fact label="Based in" value="Utah, USA" />
+            <Fact label="Focus" value="Data analysis & AI" />
+            <Fact label="Languages" value="Japanese (native), English" />
           </div>
-        </Section>
+        </div>
+      </section>
 
-        {/* Timeline Section */}
-        <Section id="about-timeline" title="Experience & Education" className="reveal">
-          <div className="flex flex-col gap-8 max-w-2xl mx-auto">
-            {timeline.map((item) => (
-              <TimelineItem key={item.title} title={item.title} org={item.org} period={item.period}>
-                {item.desc}
-              </TimelineItem>
-            ))}
+      {/* Story */}
+      <section className="py-12 md:py-16">
+        <div className="max-w-7xl mx-auto px-4 md:px-6 grid lg:grid-cols-3 gap-10">
+          <div className="reveal lg:col-span-2 space-y-4">
+            <h2 className="text-xl font-semibold">My story</h2>
+            <p className="text-white/80 leading-relaxed">
+              I decided to learn programming to gain the skills needed to create services that truly help people. I
+              enjoy being a <em>giver</em>—supporting others, lending a hand, and building things that improve everyday
+              life. Studying in the U.S. expanded my worldview: meeting friends from different cultures taught me to
+              keep my mind open and stay curious.
+            </p>
+            <p className="text-white/80 leading-relaxed">
+              Outside of code, live music is my passion—hip-hop, rock, jazz, and pop. Those moments at concerts recharge
+              me and remind me why creating meaningful experiences matters.
+            </p>
           </div>
-        </Section>
 
-        {/* Values / Principles */}
-        <Section id="about-values" title="Values & Principles" className="reveal">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {values.map((val) => (
-              <div
-                key={val.title}
-                className="rounded-2xl ring-1 ring-white/10 bg-white/5 dark:bg-white/5 p-8 flex flex-col items-center text-center shadow"
-              >
-                <div className="mb-4">{val.icon}</div>
-                <h3 className="text-xl font-bold text-accent mb-2">{val.title}</h3>
-                <p className="text-base text-white/80 dark:text-[#e6e6e8]/80">{val.desc}</p>
-              </div>
-            ))}
+          {/* Values / Principles */}
+          <div className="reveal space-y-4">
+            <h3 className="text-lg font-semibold">What I value</h3>
+            <ul className="space-y-3">
+              <ValueCard
+                title="Pursue what you love"
+                text="Give 180% to the work that excites you—that’s where energy and growth come from."
+              />
+              <ValueCard
+                title="Build & ship"
+                text="Act, learn, and iterate. Shipping real projects teaches faster than theory alone."
+              />
+              <ValueCard
+                title="Mentorship & community"
+                text="Grow with trusted mentors and diverse friends; keep giving and keep learning."
+              />
+            </ul>
           </div>
-        </Section>
+        </div>
+      </section>
 
-        {/* CTA Footer */}
-        <Section id="about-cta" className="reveal text-center">
-          <div className="flex flex-wrap justify-center gap-4">
+      {/* Timeline */}
+      <section className="py-12 md:py-20">
+        <div className="max-w-7xl mx-auto px-4 md:px-6">
+          <h2 className="reveal text-xl font-semibold mb-8">Timeline</h2>
+          <div className="reveal space-y-6">
+            <TimelineItem
+              period="~ HS (Aichi, Japan)"
+              title="Handball Club (5 years)"
+              detail="Trained and competed through junior high and high school—learned teamwork, grit, and creative problem-solving."
+            />
+            <TimelineItem
+              period="2024 →"
+              title="Study abroad (F-1)"
+              detail="BYU ELC & life in the U.S. Broadened perspective and cultural understanding."
+            />
+            <TimelineItem
+              period="2025 → present"
+              title="Ensign College — A.S., Computer Science"
+              detail="Web dev coursework & projects (Portfolio, Blackjack, Dessert Shop). Exploring data analysis and AI."
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Skills */}
+      <section className="py-12 md:py-16">
+        <div className="max-w-7xl mx-auto px-4 md:px-6">
+          <h2 className="reveal text-xl font-semibold mb-6">Skills</h2>
+          <div className="reveal flex flex-wrap gap-2">
+            <Badge>JavaScript</Badge>
+            <Badge>React / Next.js</Badge>
+            <Badge>Tailwind CSS</Badge>
+            <Badge>Java</Badge>
+            <Badge>SQL (basics)</Badge>
+            <Badge>Git / GitHub</Badge>
+            <Badge>Data analysis (learning)</Badge>
+            <Badge>AI / ML (exploring)</Badge>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-12 md:py-20">
+        <div className="max-w-7xl mx-auto px-4 md:px-6 text-center reveal">
+          <h3 className="text-2xl font-semibold mb-4">Want to know more?</h3>
+          <p className="text-white/70 mb-6">Check out my projects or get in touch—{"I’d"} love to connect.</p>
+          <div className="flex items-center justify-center gap-3">
             <a
-              href="https://github.com/kens-04"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-6 py-3 bg-accent text-white font-semibold rounded-xl shadow hover:bg-accent/90 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
-              aria-label="GitHub"
-            >
-              GitHub
-            </a>
-            <a
-              href="https://linkedin.com/in/kensho-okamoto"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-6 py-3 bg-transparent border border-accent text-accent font-semibold rounded-xl shadow hover:bg-accent/10 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
-              aria-label="LinkedIn"
-            >
-              LinkedIn
-            </a>
-            <Link
               href="/projects"
-              className="px-6 py-3 bg-white text-accent font-semibold rounded-xl shadow hover:bg-accent/10 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent border border-accent"
-              aria-label="View Projects"
+              className="inline-flex items-center rounded-xl bg-[#7c5cff] px-5 py-2.5 font-medium text-white shadow transition-transform hover:scale-[1.02]"
             >
-              View Projects
-            </Link>
+              Projects
+            </a>
+            <a
+              href="/contact"
+              className="inline-flex items-center rounded-xl px-5 py-2.5 font-medium ring-1 ring-white/15 hover:ring-white/30 transition"
+            >
+              Contact
+            </a>
           </div>
-        </Section>
-      </main>
-    </>
+        </div>
+      </section>
+    </main>
+  );
+}
+
+/* ---------- tiny presentational components (no extra files required) ---------- */
+
+function Fact({ label, value }) {
+  return (
+    <div className="rounded-2xl ring-1 ring-white/10 bg-white/5 px-4 py-3">
+      <div className="text-xs uppercase tracking-wide text-white/50">{label}</div>
+      <div className="mt-1 font-medium">{value}</div>
+    </div>
+  );
+}
+
+function ValueCard({ title, text }) {
+  return (
+    <li className="rounded-2xl ring-1 ring-white/10 bg-white/5 px-4 py-3">
+      <div className="font-medium">{title}</div>
+      <p className="text-sm text-white/75 mt-1">{text}</p>
+    </li>
+  );
+}
+
+function TimelineItem({ period, title, detail }) {
+  return (
+    <div className="relative pl-5">
+      <div className="absolute left-0 top-1.5 h-2 w-2 rounded-full bg-[#7c5cff]" />
+      <div className="text-xs uppercase tracking-wide text-white/50">{period}</div>
+      <div className="font-medium">{title}</div>
+      <p className="text-white/75 mt-1">{detail}</p>
+    </div>
+  );
+}
+
+function Badge({ children }) {
+  return (
+    <span className="inline-flex items-center rounded-full bg-white/5 ring-1 ring-white/10 px-3 py-1 text-sm text-white/85">
+      {children}
+    </span>
   );
 }
