@@ -4,9 +4,33 @@ export const metadata = {
     "About Kensho Okamoto — a Japan-born software engineering student in Utah who loves helping people, data/AI, and live music.",
 };
 
+
+import { useEffect } from "react";
 import Navbar from "../../components/Navbar";
 
-export default function About() {
+  // IntersectionObserver for .reveal-in
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const els = document.querySelectorAll(".reveal");
+    if (!('IntersectionObserver' in window)) {
+      els.forEach((el) => el.classList.add("reveal-in"));
+      return;
+    }
+    const io = new window.IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("reveal-in");
+            io.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.15 }
+    );
+    els.forEach((el) => io.observe(el));
+    return () => io.disconnect();
+  }, []);
+
   return (
     <>
       <Navbar />
@@ -164,7 +188,7 @@ export default function About() {
       </main>
     </>
   );
-}
+
 
 /* ---------- tiny presentational components (no extra files required) ---------- */
 
@@ -204,4 +228,5 @@ function Badge({ children }) {
     </span>
   );
 }
+
 
