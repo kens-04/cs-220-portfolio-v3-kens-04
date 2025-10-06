@@ -84,7 +84,7 @@ export default function About() {
               <ul className="space-y-3">
                 <ValueCard
                   title="Pursue what you love"
-                  text="Give 180% to the work that excites you—that’s where energy and growth come from."
+                  text="Give 180% to the work that excites you—that is where energy and growth come from."
                 />
                 <ValueCard
                   title="Build & ship"
@@ -144,7 +144,7 @@ export default function About() {
         <section className="py-12 md:py-20">
           <div className="max-w-7xl mx-auto px-4 md:px-6 text-center reveal">
             <h3 className="text-2xl font-semibold mb-4">Want to know more?</h3>
-            <p className="text-white/70 mb-6">Check out my projects or get in touch—{"I’d"} love to connect.</p>
+            <p className="text-white/70 mb-6">Check out my projects or get in touch I would love to connect.</p>
             <div className="flex items-center justify-center gap-3">
               <a
                 href="/projects"
@@ -204,3 +204,4 @@ function Badge({ children }) {
     </span>
   );
 }
+
