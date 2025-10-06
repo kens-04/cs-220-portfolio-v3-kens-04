@@ -56,7 +56,7 @@ export default function Home() {
             GitHub
           </a>
           <a
-            href="https://linkedin.com/in/kensho-okamoto"
+            href="https://www.linkedin.com/in/kensho-okamoto-02891235a/"
             target="_blank"
             rel="noopener noreferrer"
             className="px-6 py-3 bg-transparent border border-accent text-accent font-semibold rounded-xl shadow hover:bg-accent/10 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"

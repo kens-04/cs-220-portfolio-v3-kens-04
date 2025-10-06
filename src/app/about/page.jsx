@@ -43,9 +43,9 @@ import Navbar from "../../components/Navbar";
                 About <span className="text-[#7c5cff]">Kensho Okamoto</span>
               </h1>
               <p className="text-lg leading-relaxed text-[#171717] dark:text-white/80">
-                I am a software engineering student based in Utah, originally from Japan. I started programming
+                I am a software engineering student in Utah, originally from Japan. I started programming
                 because I want to build services that help many people and make their day a little happier. Studying
-                abroad broadened my perspective and taught me to embrace diverse cultures and ways of thinking.
+                abroad expanded my perspective and taught me to embrace diverse cultures and ways of thinking.
               </p>
               <div className="flex flex-wrap gap-3">
                 <a
@@ -134,12 +134,12 @@ import Navbar from "../../components/Navbar";
                 detail="Trained and competed through junior high and high school—learned teamwork, grit, and creative problem-solving."
               />
               <TimelineItem
-                period="2024 →"
+                period="2024/9 →2025/4"
                 title="Study abroad (F-1)"
                 detail="BYU ELC & life in the U.S. Broadened perspective and cultural understanding."
               />
               <TimelineItem
-                period="2025 → present"
+                period="2025/5 → present"
                 title="Ensign College — A.S., Computer Science"
                 detail="Web dev coursework & projects (Portfolio, Blackjack, Dessert Shop). Exploring data analysis and AI."
               />
