@@ -8,6 +8,7 @@ export const metadata = {
 import { useEffect } from "react";
 import Navbar from "../../components/Navbar";
 
+export default function About() {
   // IntersectionObserver for .reveal-in
   useEffect(() => {
     if (typeof window === "undefined") return;
@@ -228,5 +229,4 @@ function Badge({ children }) {
     </span>
   );
 }
-
-
+}
