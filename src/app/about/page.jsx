@@ -4,36 +4,13 @@ export const metadata = {
     "About Kensho Okamoto — a Japan-born software engineering student in Utah who loves helping people, data/AI, and live music.",
 };
 
-
-import { useEffect } from "react";
 import Navbar from "../../components/Navbar";
+import RevealMount from "../../components/RevealMount";
 
 export default function About() {
-  // IntersectionObserver for .reveal-in
-  useEffect(() => {
-    if (typeof window === "undefined") return;
-    const els = document.querySelectorAll(".reveal");
-    if (!('IntersectionObserver' in window)) {
-      els.forEach((el) => el.classList.add("reveal-in"));
-      return;
-    }
-    const io = new window.IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("reveal-in");
-            io.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.15 }
-    );
-    els.forEach((el) => io.observe(el));
-    return () => io.disconnect();
-  }, []);
-
   return (
     <>
+      <RevealMount />
       <Navbar />
       <main className="min-h-screen">
         {/* Hero */}
@@ -44,9 +21,9 @@ export default function About() {
                 About <span className="text-[#7c5cff]">Kensho Okamoto</span>
               </h1>
               <p className="text-lg leading-relaxed text-[#171717] dark:text-white/80">
-                I am a software engineering student in Utah, originally from Japan. I started programming
-                because I want to build services that help many people and make their day a little happier. Studying
-                abroad expanded my perspective and taught me to embrace diverse cultures and ways of thinking.
+                I am a software engineering student in Utah, originally from Japan. I started programming because I want
+                to build services that help many people and make their day a little happier. Studying abroad expanded my
+                perspective and taught me to embrace diverse cultures and ways of thinking.
               </p>
               <div className="flex flex-wrap gap-3">
                 <a
@@ -190,43 +167,42 @@ export default function About() {
     </>
   );
 
+  /* ---------- tiny presentational components (no extra files required) ---------- */
 
-/* ---------- tiny presentational components (no extra files required) ---------- */
+  function Fact({ label, value }) {
+    return (
+      <div className="rounded-2xl ring-1 ring-white/10 bg-white/5 px-4 py-3">
+        <div className="text-xs uppercase tracking-wide text-[#7c7c7c] dark:text-white/50">{label}</div>
+        <div className="mt-1 font-medium text-[#171717] dark:text-white">{value}</div>
+      </div>
+    );
+  }
 
-function Fact({ label, value }) {
-  return (
-    <div className="rounded-2xl ring-1 ring-white/10 bg-white/5 px-4 py-3">
-      <div className="text-xs uppercase tracking-wide text-[#7c7c7c] dark:text-white/50">{label}</div>
-      <div className="mt-1 font-medium text-[#171717] dark:text-white">{value}</div>
-    </div>
-  );
-}
+  function ValueCard({ title, text }) {
+    return (
+      <li className="rounded-2xl ring-1 ring-white/10 bg-white/5 px-4 py-3">
+        <div className="font-medium text-[#171717] dark:text-white">{title}</div>
+        <p className="text-sm text-[#171717] dark:text-white/75 mt-1">{text}</p>
+      </li>
+    );
+  }
 
-function ValueCard({ title, text }) {
-  return (
-    <li className="rounded-2xl ring-1 ring-white/10 bg-white/5 px-4 py-3">
-      <div className="font-medium text-[#171717] dark:text-white">{title}</div>
-      <p className="text-sm text-[#171717] dark:text-white/75 mt-1">{text}</p>
-    </li>
-  );
-}
+  function TimelineItem({ period, title, detail }) {
+    return (
+      <div className="relative pl-5">
+        <div className="absolute left-0 top-1.5 h-2 w-2 rounded-full bg-[#7c5cff]" />
+        <div className="text-xs uppercase tracking-wide text-[#7c7c7c] dark:text-white/50">{period}</div>
+        <div className="font-medium text-[#171717] dark:text-white">{title}</div>
+        <p className="text-[#171717] dark:text-white/75 mt-1">{detail}</p>
+      </div>
+    );
+  }
 
-function TimelineItem({ period, title, detail }) {
-  return (
-    <div className="relative pl-5">
-      <div className="absolute left-0 top-1.5 h-2 w-2 rounded-full bg-[#7c5cff]" />
-      <div className="text-xs uppercase tracking-wide text-[#7c7c7c] dark:text-white/50">{period}</div>
-      <div className="font-medium text-[#171717] dark:text-white">{title}</div>
-      <p className="text-[#171717] dark:text-white/75 mt-1">{detail}</p>
-    </div>
-  );
-}
-
-function Badge({ children }) {
-  return (
-    <span className="inline-flex items-center rounded-full bg-white/5 ring-1 ring-white/10 px-3 py-1 text-sm text-[#171717] dark:text-white/85">
-      {children}
-    </span>
-  );
-}
+  function Badge({ children }) {
+    return (
+      <span className="inline-flex items-center rounded-full bg-white/5 ring-1 ring-white/10 px-3 py-1 text-sm text-[#171717] dark:text-white/85">
+        {children}
+      </span>
+    );
+  }
 }
