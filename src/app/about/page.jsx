@@ -86,7 +86,7 @@ export default function About() {
               <ul className="space-y-3">
                 <ValueCard
                   title="Pursue what you love"
-                  text="Give 180% to the work that excites you—that is where energy and growth come from."
+                  text="Give 180% to the work that excites you—that is where my energy and growth come from."
                 />
                 <ValueCard
                   title="Build & ship"
