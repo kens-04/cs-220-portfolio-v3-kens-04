@@ -1,8 +1,4 @@
 "use client";
-export const metadata = {
-  title: "Projects — Kensho Okamoto",
-  description: "Selected projects and experiments.",
-};
 
 import { useState, useMemo } from "react";
 import { projects } from "../../lib/projects";
