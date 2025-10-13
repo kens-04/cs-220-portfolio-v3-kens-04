@@ -102,12 +102,12 @@ export default function Home() {
       <Section className="reveal">
         <h2 className="text-2xl md:text-3xl font-bold text-accent mb-8 text-center">Featured Project</h2>
         <FeaturedCard
-          image="/featured.jpg"
-          title="Portfolio Platform"
-          description="A modern, responsive portfolio platform built with Next.js and TailwindCSS. Features dark mode, project showcases, and blazing fast performance."
-          tags={["Next.js", "TailwindCSS", "Vercel"]}
-          github="https://github.com/kens-04/portfolio"
-        />
+            image="/cs-220-portfolio-v3-kens-04/featured.jpg"
+            title="Portfolio Platform"
+            description="A modern, responsive portfolio platform built with Next.js and TailwindCSS. Features dark mode, project showcases, and blazing fast performance."
+            tags={["Next.js", "TailwindCSS", "Vercel"]}
+            github="https://github.com/kens-04/portfolio"
+          />
       </Section>
     </>
   );
