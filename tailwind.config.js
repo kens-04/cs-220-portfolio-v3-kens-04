@@ -2,9 +2,9 @@
 module.exports = {
   darkMode: "class",
   content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/app/**/*.{js,jsx,ts,tsx,mdx}",
+    "./src/components/**/*.{js,jsx,ts,tsx,mdx}",
+    "./src/pages/**/*.{js,jsx,ts,tsx,mdx}",
   ],
   theme: {
     extend: {
@@ -18,4 +18,18 @@ module.exports = {
     },
   },
   plugins: [],
+  safelist: [
+    "bg-white",
+    "bg-black",
+    "text-white",
+    "text-black",
+    "ring-1",
+    "ring-gray-200",
+    "ring-white/10",
+    "dark",
+    "container",
+    "mx-auto",
+    "px-4",
+    "md:px-6",
+  ],
 };
