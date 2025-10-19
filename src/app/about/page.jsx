@@ -6,6 +6,7 @@ export const metadata = {
 
 import Navbar from "../../components/Navbar";
 import RevealMount from "../../components/RevealMount";
+import Image from "next/image";
 
 export default function About() {
   return (
@@ -41,10 +42,17 @@ export default function About() {
               </div>
             </div>
 
-            {/* Profile Image placeholder */}
+            {/* Profile Image */}
             <div className="reveal md:justify-self-end">
-              <div className="aspect-square w-64 md:w-80 rounded-3xl bg-white/5 ring-1 ring-white/10 shadow-lg overflow-hidden grid place-items-center">
-                <span className="text-sm text-white/60">Profile Photo</span>
+              <div className="aspect-square w-64 md:w-80 rounded-3xl bg-white/5 ring-1 ring-white/10 shadow-lg overflow-hidden">
+                <Image
+                  src="/images/progile.jpg"
+                  alt="Kensho Okamoto — profile photo"
+                  width={320}
+                  height={320}
+                  className="object-cover w-full h-full"
+                  priority={true}
+                />
               </div>
             </div>
           </div>
