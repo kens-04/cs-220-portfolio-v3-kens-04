@@ -1,7 +1,8 @@
-/** @type {import('next').NextConfig} */
+/** Minimal Next.js config for Codespaces dev
+ * Keep this minimal to avoid basePath/assetPrefix interfering with local dev or Vercel.
+ */
 const nextConfig = {
-  output: 'export',
-  basePath: '/cs-220-portfolio-v3-kens-04',
-  images: { unoptimized: true },
+  reactStrictMode: true,
 };
+
 export default nextConfig;
