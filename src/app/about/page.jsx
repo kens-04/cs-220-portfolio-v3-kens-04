@@ -46,7 +46,7 @@ export default function About() {
             <div className="reveal md:justify-self-end">
               <div className="aspect-square w-64 md:w-80 rounded-3xl bg-white/5 ring-1 ring-white/10 shadow-lg overflow-hidden">
                 <Image
-                  src="/images/progile.jpg"
+                  src="/images/IMG_3795.jpg"
                   alt="Kensho Okamoto — profile photo"
                   width={320}
                   height={320}
