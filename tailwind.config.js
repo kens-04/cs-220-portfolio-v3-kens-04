@@ -16,7 +16,7 @@ module.exports = {
         accent: "#7c5cff",
       },
     },
-  },
+  },//
   plugins: [],
   safelist: [
     "bg-white",
