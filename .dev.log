@@ -16,3 +16,14 @@ Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
  ✓ Compiled in 429ms (216 modules)
  ⚠ Unsupported metadata themeColor is configured in metadata export in /. Please move it to viewport export instead.
 Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ✓ Compiled in 2.9s (537 modules)
+ ✓ Compiled in 258ms (537 modules)
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ○ Compiling /not-found ...
+ ✓ Compiled /not-found in 585ms (528 modules)
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /cs-220-portfolio-v3-kens-04/featured.jpg. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /cs-220-portfolio-v3-kens-04/featured.jpg. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⨯ The requested resource isn't a valid image for /cs-220-portfolio-v3-kens-04/featured.jpg received text/html; charset=utf-8
